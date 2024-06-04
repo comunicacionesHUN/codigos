@@ -32,5 +32,63 @@
 	<option>D. Ninguna</option>
         <correct>B. Bogotá</correct>
     </question>
+
+	<question>
+        <text>¿pregunta5?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+	<option>D. Ninguna</option>
+        <correct>B. Bogotá</correct>
+    </question>
+
+	<question>
+        <text>¿pregunta6?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+	<option>D. Ninguna</option>
+        <correct>B. Bogotá</correct>
+    </question>
+	<question>
+        <text>¿pregunta7?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+	<option>D. Ninguna</option>
+        <correct>B. Bogotá</correct>
+    </question>
+	<question>
+        <text>¿pregunta8?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+	<option>D. Ninguna</option>
+        <correct>B. Bogotá</correct>
+    </question>
+	<question>
+        <text>¿pregunta9?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+	<option>D. Ninguna</option>
+        <correct>B. Bogotá</correct>
+    </question>
+	<question>
+        <text>¿pregunta10?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+	<option>D. Ninguna</option>
+        <correct>B. Bogotá</correct>
+    </question>
+	<question>
+        <text>¿pregunta11?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+	<option>D. Ninguna</option>
+        <correct>B. Bogotá</correct>
+    </question>
     <!-- Más preguntas aquí -->
 </questions>
