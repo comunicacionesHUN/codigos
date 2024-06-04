@@ -19,14 +19,14 @@
         <option>A. Ciudad de México</option>
         <option>B. Bogotá</option>
         <option>C. Lima</option>
-        <correct>C. Ciudad de México</correct>
+        <correct>C. Lima</correct>
     </question>
 <question>
         <text>¿pregunta4?</text>
         <option>A. Ciudad de México</option>
         <option>B. Bogotá</option>
         <option>C. Lima</option>
-        <correct>B. Ciudad de México</correct>
+        <correct>B. Bogotá</correct>
     </question>
     <!-- Más preguntas aquí -->
 </questions>
