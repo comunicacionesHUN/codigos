@@ -15,11 +15,18 @@
         <correct>A. Ciudad de México</correct>
     </question>
 <question>
-        <text>¿que?</text>
-        <option>A. pregunta</option>
+        <text>¿pregunta3?</text>
+        <option>A. Ciudad de México</option>
         <option>B. Bogotá</option>
         <option>C. Lima</option>
         <correct>C. Ciudad de México</correct>
+    </question>
+<question>
+        <text>¿pregunta4?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>B. Ciudad de México</correct>
     </question>
     <!-- Más preguntas aquí -->
 </questions>
