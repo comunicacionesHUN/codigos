@@ -14,5 +14,81 @@
         <option>C. Lima</option>
         <correct>A. Ciudad de México</correct>
     </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. Pregunta3</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta4</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta5</correct>
+    </question><question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta6</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta7</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta8</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta9</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta10</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta11</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta12</correct>
+    </question>
+<question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. pregunta13</correct>
+    </question>
     <!-- Más preguntas aquí -->
 </questions>
