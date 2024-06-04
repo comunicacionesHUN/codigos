@@ -49,6 +49,7 @@
         <correct>B. Correcta</correct>
     </question>
 <question>
+	<text>¿pregunta7?</text>
         <option>A. Incorrecta</option>
         <option>B. Incorrecta</option>
         <option>C. Incorrecta</option>
@@ -56,6 +57,7 @@
         <correct>D. Correcta</correct>
     </question>
 <question>
+	<text>¿pregunta8?</text>
         <option>A. Incorrecta</option>
         <option>B. Incorrecta</option>
         <option>C. Correcta</option>
@@ -63,7 +65,7 @@
         <correct>C. Correcta</correct>
     </question>
 <question>
-        <text>¿preguntaq?</text>
+        <text>¿pregunta9?</text>
         <option>A. Correcta</option>
         <option>B. Incorrecta</option>
         <option>C. Incorrecta</option>
@@ -71,6 +73,7 @@
         <correct>A. Correcta</correct>
     </question>
     <question>
+	    <text>¿pregunta10?</text>
         <option>A. Incorrecta</option>
         <option>B. Correcta</option>
         <option>C. Incorrecta</option>
@@ -78,6 +81,7 @@
         <correct>B. Correcta</correct>
     </question>
 <question>
+	<text>¿pregunta11?</text>
         <option>A. Incorrecta</option>
         <option>B. Incorrecta</option>
         <option>C. Incorrecta</option>
@@ -85,6 +89,7 @@
         <correct>D. Correcta</correct>
     </question>
 <question>
+	<text>¿pregunta12?</text>
         <option>A. Incorrecta</option>
         <option>B. Incorrecta</option>
         <option>C. Correcta</option>
