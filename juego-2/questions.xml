@@ -5,6 +5,7 @@
         <option>A. Azul</option>
         <option>B. Rojo</option>
         <option>C. Verde</option>
+	<option>D. Ninguna</option>
         <correct>B. Rojo</correct>
     </question>
     <question>
@@ -12,6 +13,7 @@
         <option>A. Ciudad de México</option>
         <option>B. Bogotá</option>
         <option>C. Lima</option>
+	<option>D. Ninguna</option>
         <correct>A. Ciudad de México</correct>
     </question>
 <question>
@@ -19,6 +21,7 @@
         <option>A. Ciudad de México</option>
         <option>B. Bogotá</option>
         <option>C. Lima</option>
+	<option>D. Ninguna</option>
         <correct>C. Lima</correct>
     </question>
 <question>
@@ -26,6 +29,7 @@
         <option>A. Ciudad de México</option>
         <option>B. Bogotá</option>
         <option>C. Lima</option>
+	<option>D. Ninguna</option>
         <correct>B. Bogotá</correct>
     </question>
     <!-- Más preguntas aquí -->
