@@ -1,94 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <questions>
     <question>
-        <text>¿Cuál es tu color favorito?</text>
-        <option>A. Azul</option>
-        <option>B. Rojo</option>
-        <option>C. Verde</option>
-	<option>D. Ninguna</option>
-        <correct>B. Rojo</correct>
+        <text>¿pregunta1?</text>
+        <option>A. Correcta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Incorrecta</option>
+        <correct>A. Correcta</correct>
     </question>
     <question>
-        <text>¿Dónde naciste?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>A. Ciudad de México</correct>
+	<text>¿pregunta2?</text>
+        <option>A. Incorrecta</option>
+        <option>B. Correcta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Incorrecta</option>
+        <correct>B. Correcta</correct>
     </question>
 <question>
-        <text>¿pregunta3?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>C. Lima</correct>
+	<text>¿pregunta3?</text>
+        <option>A. Incorrecta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Correcta</option>
+        <correct>D. Correcta</correct>
     </question>
 <question>
-        <text>¿pregunta4?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>B. Bogotá</correct>
+	<text>¿pregunta4?</text>
+        <option>A. Incorrecta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Correcta</option>
+	<option>D. Incorrecta</option>
+        <correct>C. Correcta</correct>
     </question>
-
-	<question>
-        <text>¿pregunta5?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>B. Bogotá</correct>
+<question>
+	<text>¿pregunta5?</text>
+        <option>A. Correcta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Incorrecta</option>
+        <correct>A. Correcta</correct>
     </question>
-
-	<question>
-        <text>¿pregunta6?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>B. Bogotá</correct>
+    <question>
+	<text>¿pregunta6?</text>
+        <option>A. Incorrecta</option>
+        <option>B. Correcta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Incorrecta</option>
+        <correct>B. Correcta</correct>
     </question>
-	<question>
-        <text>¿pregunta7?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>B. Bogotá</correct>
+<question>
+        <option>A. Incorrecta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Correcta</option>
+        <correct>D. Correcta</correct>
     </question>
-	<question>
-        <text>¿pregunta8?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>B. Bogotá</correct>
+<question>
+        <option>A. Incorrecta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Correcta</option>
+	<option>D. Incorrecta</option>
+        <correct>C. Correcta</correct>
     </question>
-	<question>
-        <text>¿pregunta9?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>B. Bogotá</correct>
+<question>
+        <text>¿preguntaq?</text>
+        <option>A. Correcta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Incorrecta</option>
+        <correct>A. Correcta</correct>
     </question>
-	<question>
-        <text>¿pregunta10?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>B. Bogotá</correct>
+    <question>
+        <option>A. Incorrecta</option>
+        <option>B. Correcta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Incorrecta</option>
+        <correct>B. Correcta</correct>
     </question>
-	<question>
-        <text>¿pregunta11?</text>
-        <option>A. Ciudad de México</option>
-        <option>B. Bogotá</option>
-        <option>C. Lima</option>
-	<option>D. Ninguna</option>
-        <correct>B. Bogotá</correct>
+<question>
+        <option>A. Incorrecta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Incorrecta</option>
+	<option>D. Correcta</option>
+        <correct>D. Correcta</correct>
+    </question>
+<question>
+        <option>A. Incorrecta</option>
+        <option>B. Incorrecta</option>
+        <option>C. Correcta</option>
+	<option>D. Incorrecta</option>
+        <correct>C. Correcta</correct>
     </question>
     <!-- Más preguntas aquí -->
 </questions>
