@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <question>
+        <text>¿Cuál es tu color favorito?</text>
+        <option>A. Azul</option>
+        <option>B. Rojo</option>
+        <option>C. Verde</option>
+        <correct>B. Rojo</correct>
+    </question>
+    <question>
+        <text>¿Dónde naciste?</text>
+        <option>A. Ciudad de México</option>
+        <option>B. Bogotá</option>
+        <option>C. Lima</option>
+        <correct>A. Ciudad de México</correct>
+    </question>
+
+    <!-- Más preguntas aquí -->
+</questions>
