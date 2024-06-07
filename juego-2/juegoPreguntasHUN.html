@@ -33,25 +33,27 @@
             margin-bottom: 20px;
         }
         .option {
-            display: block;
-            background-color: #444;
-            color: #fff;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: background-color 0.3s;
+			background-color: #444;
+			color: #fff;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.2em;
+			cursor: pointer;
+			transition: background-color 0.3s;
+			display: inline-block;
+			width: 40%;
+			margin: 0 1% 1%;
         }
+		
         .option:hover {
             background-color: #555;
         }
         .option.correct {
-            background-color: green;
+            border-color: green;
         }
         .option.incorrect {
-            background-color: red;
+            border-color: red;
         }
         #next-button {
             display: none;
