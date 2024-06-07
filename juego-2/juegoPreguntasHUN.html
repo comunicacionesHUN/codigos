@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas de Opción Múltiple</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #2a2a2a;
+            margin: 0;
+            padding: 20px;
+            font-size: 2em;
+            border-bottom: 3px solid #444;
+        }
+        #question-container {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 3px solid #444;
+            border-radius: 10px;
+            background-color: #1c1c1c;
+        }
+        #question {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .option {
+            display: block;
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #555;
+        }
+        .option.correct {
+            background-color: green;
+        }
+        .option.incorrect {
+            background-color: red;
+        }
+        #next-button {
+            display: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #next-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juego de Preguntas de Opción Múltiple</h1>
+    <div id="question-container">
+        <p id="question">Cargando preguntas...</p>
+        <div id="options"></div>
+        <button id="next-button" onclick="showNextQuestion()">Siguiente pregunta</button>
+    </div>
+
+    <script>
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let currentCorrectAnswer = '';
+
+        async function loadQuestions() {
+            try {
+                const response = await fetch('questions.xml');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'application/xml');
+
+                questions = Array.from(xmlDoc.getElementsByTagName('question'));
+                questions = getRandomItems(questions, 10);
+
+                showNextQuestion();
+            } catch (error) {
+                console.error('Error al cargar el XML:', error);
+                document.getElementById('question').textContent = 'Error al cargar las preguntas.';
+            }
+        }
+
+        function getRandomItems(arr, num) {
+            const shuffled = arr.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, num);
+        }
+
+        function showNextQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const question = questions[currentQuestionIndex];
+                const questionText = question.getElementsByTagName('text')[0].textContent;
+                const options = Array.from(question.getElementsByTagName('option'));
+                currentCorrectAnswer = question.getElementsByTagName('correct')[0].textContent;
+
+                document.getElementById('question').textContent = questionText;
+
+                const optionsContainer = document.getElementById('options');
+                optionsContainer.innerHTML = '';
+                options.forEach(option => {
+                    const optionElement = document.createElement('button');
+                    optionElement.className = 'option';
+                    optionElement.textContent = option.textContent;
+                    optionElement.onclick = () => checkAnswer(optionElement);
+                    optionsContainer.appendChild(optionElement);
+                });
+
+                document.getElementById('next-button').style.display = 'none';
+            } else {
+                document.getElementById('question').textContent = '¡Has respondido todas las preguntas!';
+                document.getElementById('options').innerHTML = '';
+                document.getElementById('next-button').style.display = 'none';
+            }
+
+            currentQuestionIndex++;
+        }
+
+        function checkAnswer(selectedOption) {
+            const allOptions = document.querySelectorAll('.option');
+            allOptions.forEach(option => {
+                option.disabled = true;
+                if (option.textContent === currentCorrectAnswer) {
+                    option.classList.add('correct');
+                } else {
+                    option.classList.add('incorrect');
+                }
+            });
+
+            document.getElementById('next-button').style.display = 'inline-block';
+        }
+
+        window.onload = loadQuestions;
+    </script>
+</body>
+</html>
