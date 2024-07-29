@@ -70,9 +70,48 @@
         #next-button:hover {
             background-color: #0056b3;
         }
+		button#playPauseButton {
+    right: 20px;
+    position: absolute;
+    top: 0;
+}
+		img#buttonImage {
+    width: 20px;
+}
+	img#buttonImage {
+    width: 20px;
+}
+		button#playPauseButton {
+    right: 20px;
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 7px 7px 4px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+}button#playPauseButton {
+    right: 20px;
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 7px 7px 4px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+}
     </style>
 </head>
 <body>
+	<audio id="miAudio" autoplay muted>
+        <source src="musica-preguntas.mp4" type="audio/mp4">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    <button id="playPauseButton" onclick="togglePlayPause()">
+        <img id="buttonImage" src="sin-sonido.png" alt="Reproducir" width="50">
+    </button>
     <h1>Juego de Preguntas de Opción Múltiple</h1>
     <div id="question-container">
         <p id="question">Cargando preguntas...</p>
@@ -152,6 +191,42 @@
         }
 
         window.onload = loadQuestions;
+		
+		const audio = document.getElementById('miAudio');
+        const button = document.getElementById('playPauseButton');
+        
+        
+        
+        audio.muted = false;
+
+        function togglePlayPause() {
+            if (audio.paused) {
+                audio.play();
+                buttonImage.src = 'sonido.png';
+                buttonImage.alt = 'Pausar';
+            } else {
+                audio.pause();
+                buttonImage.src = 'sin-sonido.png';
+                buttonImage.alt = 'Reproducir';
+            }
+        }
+
+        // Iniciar automáticamente la reproducción y ajustar la imagen del botón
+        audio.addEventListener('play', function() {
+            buttonImage.src = 'sonido.png';
+            buttonImage.alt = 'Pausar';
+        });
+
+        audio.addEventListener('pause', function() {
+            buttonImage.src = 'sin-sonido.png';
+            buttonImage.alt = 'Reproducir';
+        });
+        
+        // Intentar la reproducción automática y manejar la posible falla
+        audio.play().catch(function(error) {
+            buttonImage.src = 'sin-sonido.png';
+            buttonImage.alt = 'Reproducir';
+        });
     </script>
 </body>
 </html>
