@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boletín de Noticias</title>
     <style>
+		
+		@font-face {
+            font-family: 'Ancizar-Sans';
+            src: url('links/Ancizar-Sans-Regular.otf') format('otf')
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Ancizar-Sans', sans-serif;
             margin: 0;
             padding: 0;
             
@@ -28,29 +37,42 @@
 			
         }
 		 
-        .news-item {
+       .news-item {
             margin-bottom: 20px;
-            padding: 15px;
+            padding: 15px 0;
             border-bottom: 1px solid #cccccc;
         }
+
+        .news-item img {
+            max-width: 120px;
+            margin-right: 20px;
+            border-radius: 5px;
+			float: left
+        }
+
+        .news-content {
+            max-width: 420px;
+        }
         .news-item h2 {
-			background: #ccc;
             margin: 0 0 10px 0;
             font-size: 18px;
-			line-height: 0;
             color: #000;
         }
-		.news-item h3{
+		.news-item span{
 			font-size: 16px;
 			font-weight: 200;
 		}
         .news-item p {
+			display: block;
+			background: #ccc;
             margin: 0 0 10px 0;
-            color: #666666;
+            color: #4f4f4f;
+			float: left;
         }
         .news-item a {
             display: inline-block;
             padding: 10px 15px;
+			margin-top: 10px;
             background-color: #004aad;
             color: white;
             text-decoration: none;
@@ -63,7 +85,7 @@
             text-align: center;
             padding: 20px;
             background-color: #f4f4f4;
-            color: #666666;
+            color: #4f4f4f;
             font-size: 12px;
         }
     </style>
@@ -75,26 +97,36 @@
         </div>
 
         <div class="news-item">
-            <h2>GOBERNANZA Y LIDERAZGO</h2><h3> Objetivos de la Junta Directiva de la Corporación Salud UN</h3>
-            <p>Uno de los órganos de gobierno de la Corporación Salud UN, responsable de establecer y evaluar la visión y misión del hospital, así como de desarrollar estrategias a largo plazo a través del liderazgo y supervisión financiera es la Junta Directiva, renovada desde el mes pasado cumple una función estratégica que nos alinea a la UNAL y a las necesidades del país.</p>
+			<img src="links/fachada-mail.jpg" alt="Imagen Noticia 1">
+            <h2>GOBERNANZA Y LIDERAZGO<span> <br>
+              Objetivos de la Junta Directiva de la Corporación Salud UN</span></h2>
+            </p>Uno de los órganos de gobierno de la Corporación Salud UN, responsable de establecer y evaluar la visión y misión del hospital, así como de desarrollar estrategias a largo plazo a través del liderazgo y supervisión financiera es la Junta Directiva, renovada desde el mes pasado cumple una función estratégica que nos alinea a la UNAL y a las necesidades del país.<br>
+            </p>
             <a href="https://example.com/noticia1">Leer más</a>
         </div>
 
         <div class="news-item">
-            <h2>GOBERNANZA Y LIDERAZGO</h2><h3> Objetivos de la Junta Directiva de la Corporación Salud UN</h3>
-            <p>Uno de los órganos de gobierno de la Corporación Salud UN, responsable de establecer y evaluar la visión y misión del hospital, así como de desarrollar estrategias a largo plazo a través del liderazgo y supervisión financiera es la Junta Directiva, renovada desde el mes pasado cumple una función estratégica que nos alinea a la UNAL y a las necesidades del país.</p>
+			<img src="links/fachada-mail.jpg" alt="Imagen Noticia 2">
+               <p><h2>GOBERNANZA Y LIDERAZGO<span> <br>
+           Objetivos de la Junta Directiva de la Corporación Salud UN</span></h2>
+               Uno de los órganos de gobierno de la Corporación Salud UN, responsable de establecer y evaluar la visión y misión del hospital, así como de desarrollar estrategias a largo plazo a través del liderazgo y supervisión financiera es la Junta Directiva, renovada desde el mes pasado cumple una función estratégica que nos alinea a la UNAL y a las necesidades del país.<br>
+         </p>
             <a href="https://example.com/noticia1">Leer más</a>
         </div>
-
-        <div class="news-item">
-            <h2>GOBERNANZA Y LIDERAZGO</h2><h3> Objetivos de la Junta Directiva de la Corporación Salud UN</h3>
-            <p>Uno de los órganos de gobierno de la Corporación Salud UN, responsable de establecer y evaluar la visión y misión del hospital, así como de desarrollar estrategias a largo plazo a través del liderazgo y supervisión financiera es la Junta Directiva, renovada desde el mes pasado cumple una función estratégica que nos alinea a la UNAL y a las necesidades del país.</p>
+	<div class="news-item">
+			<img src="links/fachada-mail.jpg" alt="Imagen Noticia 3">
+            <p><h2>GOBERNANZA Y LIDERAZGO<span> <br>
+              Objetivos de la Junta Directiva de la Corporación Salud UN</span></h2>
+            Uno de los órganos de gobierno de la Corporación Salud UN, responsable de establecer y evaluar la visión y misión del hospital, así como de desarrollar estrategias a largo plazo a través del liderazgo y supervisión financiera es la Junta Directiva, renovada desde el mes pasado cumple una función estratégica que nos alinea a la UNAL y a las necesidades del país.<br>
+            </p>
             <a href="https://example.com/noticia1">Leer más</a>
         </div>
-
-        <div class="news-item">
-            <h2>GOBERNANZA Y LIDERAZGO</h2><h3> Objetivos de la Junta Directiva de la Corporación Salud UN</h3>
-            <p>Uno de los órganos de gobierno de la Corporación Salud UN, responsable de establecer y evaluar la visión y misión del hospital, así como de desarrollar estrategias a largo plazo a través del liderazgo y supervisión financiera es la Junta Directiva, renovada desde el mes pasado cumple una función estratégica que nos alinea a la UNAL y a las necesidades del país.</p>
+<div class="news-item">
+			<img src="links/fachada-mail.jpg" alt="Imagen Noticia 4">
+            <p><h2>GOBERNANZA Y LIDERAZGO<span> <br>
+              Objetivos de la Junta Directiva de la Corporación Salud UN</span></h2>
+            Uno de los órganos de gobierno de la Corporación Salud UN, responsable de establecer y evaluar la visión y misión del hospital, así como de desarrollar estrategias a largo plazo a través del liderazgo y supervisión financiera es la Junta Directiva, renovada desde el mes pasado cumple una función estratégica que nos alinea a la UNAL y a las necesidades del país.<br>
+            </p>
             <a href="https://example.com/noticia1">Leer más</a>
         </div>
 
