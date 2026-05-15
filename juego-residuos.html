@@ -34,7 +34,7 @@ canvas#gc{display:block;width:100%;border:2px solid #1a1a6e;border-radius:4px;ba
 
 <div id="sn" class="scr on">
   <h1 class="ttl">ECO-OWL</h1>
-  <p class="sub">El búho de la sostenibilidad necesita tu ayuda</p>
+  <p class="sub">El bÃºho de la sostenibilidad necesita tu ayuda</p>
   <input class="ni" id="pname" placeholder="Tu nombre" maxlength="16"/>
   <button class="btn-white" onclick="goQuestion()">Jugar</button>
 </div>
@@ -43,13 +43,13 @@ canvas#gc{display:block;width:100%;border:2px solid #1a1a6e;border-radius:4px;ba
   <h1 class="ttl" style="margin-bottom:8px">ECO-OWL</h1>
   <div id="qcard">
     <h2>Pregunta del laberinto</h2>
-    <p>Si tienes un <strong style="color:#a8e063">vaso de icopor con residuos de alimento</strong>,<br>¿en qué contenedor debe ir?</p>
+    <p>Si tienes un <strong style="color:#a8e063">vaso de icopor con residuos de alimento</strong>,<br>Â¿en quÃ© contenedor debe ir?</p>
     <div class="bins-prev">
       <div class="bp bblanco">BLANCO</div>
       <div class="bp brojo">ROJO</div>
       <div class="bp bnegro">NEGRO</div>
     </div>
-    <p style="font-size:0.74rem;color:#888">Mueve al búho por el laberinto recogiendo monedas<br>y llega al contenedor con la respuesta correcta.<br>¡Cuidado con los comegalletas!</p>
+    <p style="font-size:0.74rem;color:#888">Mueve al bÃºho por el laberinto recogiendo monedas<br>y llega al contenedor con la respuesta correcta.<br>Â¡Cuidado con los comegalletas!</p>
     <button class="btn-white" onclick="startGame()" style="margin-top:6px">Entrar al laberinto</button>
   </div>
 </div>
@@ -61,9 +61,9 @@ canvas#gc{display:block;width:100%;border:2px solid #1a1a6e;border-radius:4px;ba
     <span class="lives" id="lv">Vidas: 3</span>
     <span id="tm">0s</span>
   </div>
-  <button id="muteBtn" onclick="toggleMute()">♪ Silencio</button>
+  <button id="muteBtn" onclick="toggleMute()">â™ª Silencio</button>
   <div id="cw"><canvas id="gc" width="560" height="400"></canvas></div>
-  <p id="hint">Flechas del teclado · desliza en móvil</p>
+  <p id="hint">Flechas del teclado Â· desliza en mÃ³vil</p>
 </div>
 
 <div id="sr" class="scr">
@@ -170,7 +170,8 @@ const BINS=[
   {key:'rojo',  label:'ROJO',  col:13,row:10,color:'#e44',tc:'#fff'},
   {key:'negro', label:'NEGRO', col:21,row:10,color:'#444',tc:'#fff'},
 ];
-
+const owlImg = new Image();
+owlImg.src = "https://www.hun.edu.co/sites/default/files/2026-05/hunalito.png";
 let canvas,ctx,player,ghosts,dots,score,lives,elapsed,timerInt,running,pname,animId,ranking,lastT,audioCtx,muted=false;
 
 function initDots(){
@@ -231,7 +232,7 @@ function startMusic(){
 function stopMusic(){clearTimeout(melTimer);melTimer=null;}
 function toggleMute(){
   muted=!muted;
-  document.getElementById('muteBtn').textContent=muted?'♪ Sonido':'♪ Silencio';
+  document.getElementById('muteBtn').textContent=muted?'â™ª Sonido':'â™ª Silencio';
   if(muted)stopMusic();else startMusic();
 }
 function playCoin(){playNote(1047,0,.05,.08,'sine');playNote(1319,.06,.08,.08,'sine');}
@@ -247,7 +248,7 @@ function goQuestion(){
 function startGame(){
   buildGrid();
   show('sg');
-  document.getElementById('hn').textContent='Búho: '+pname;
+  document.getElementById('hn').textContent='BÃºho: '+pname;
   canvas=document.getElementById('gc');
   ctx=canvas.getContext('2d');
   canvas.width=CW;canvas.height=CH;
@@ -429,82 +430,22 @@ function drawBinIcon(cx,cy,s){
 }
 
 function drawOwl(){
-  const cx=(player.c+0.5)*GTW,cy=(player.r+0.5)*GTH;
-  const Ro=GTW*0.46;
-  ctx.save();ctx.translate(cx,cy);
-  if(player.dc===-1)ctx.scale(-1,1);
+  const x = player.c * GTW;
+  const y = player.r * GTH;
 
-  // Body
-  ctx.fillStyle='#7a5c10';
-  ctx.beginPath();ctx.ellipse(0,Ro*0.1,Ro*0.82,Ro,0,0,Math.PI*2);ctx.fill();
+  ctx.save();
 
-  // Ear tufts
-  ctx.fillStyle='#5a4010';
-  for(let i=-1;i<=1;i+=2){
-    ctx.beginPath();
-    ctx.moveTo(i*Ro*0.18,-Ro*0.62);
-    ctx.lineTo(i*Ro*0.52,-Ro*1.08);
-    ctx.lineTo(i*Ro*0.6,-Ro*0.55);
-    ctx.closePath();ctx.fill();
+  // Voltear imagen cuando mira a la izquierda
+  if(player.dc === -1){
+    ctx.translate(x + GTW, y);
+    ctx.scale(-1,1);
+    ctx.drawImage(owlImg, 0, 0, GTW, GTH);
+  }else{
+    ctx.drawImage(owlImg, x, y, GTW, GTH);
   }
-
-  // Chest lighter
-  ctx.fillStyle='#c8a040';
-  ctx.beginPath();ctx.ellipse(0,Ro*0.18,Ro*0.56,Ro*0.65,0,0,Math.PI*2);ctx.fill();
-
-  // Wing stripe texture
-  ctx.strokeStyle='#5a4010';ctx.lineWidth=0.8;
-  for(let i=-1;i<=1;i+=2){
-    ctx.beginPath();ctx.moveTo(i*Ro*0.45,-Ro*0.1);ctx.lineTo(i*Ro*0.75,Ro*0.55);ctx.stroke();
-    ctx.beginPath();ctx.moveTo(i*Ro*0.3,Ro*0.1);ctx.lineTo(i*Ro*0.62,Ro*0.65);ctx.stroke();
-  }
-
-  // Eye whites
-  ctx.fillStyle='#fff';
-  ctx.beginPath();ctx.ellipse(-Ro*0.27,-Ro*0.14,Ro*0.27,Ro*0.29,0,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.ellipse(Ro*0.27,-Ro*0.14,Ro*0.27,Ro*0.29,0,0,Math.PI*2);ctx.fill();
-
-  // Eye ring
-  ctx.strokeStyle='#7a5c10';ctx.lineWidth=1.2;
-  ctx.beginPath();ctx.ellipse(-Ro*0.27,-Ro*0.14,Ro*0.27,Ro*0.29,0,0,Math.PI*2);ctx.stroke();
-  ctx.beginPath();ctx.ellipse(Ro*0.27,-Ro*0.14,Ro*0.27,Ro*0.29,0,0,Math.PI*2);ctx.stroke();
-
-  // Iris
-  ctx.fillStyle='#f5c518';
-  ctx.beginPath();ctx.ellipse(-Ro*0.27,-Ro*0.14,Ro*0.18,Ro*0.2,0,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.ellipse(Ro*0.27,-Ro*0.14,Ro*0.18,Ro*0.2,0,0,Math.PI*2);ctx.fill();
-
-  // Pupil
-  ctx.fillStyle='#000';
-  ctx.beginPath();ctx.arc(-Ro*0.27,-Ro*0.14,Ro*0.09,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.arc(Ro*0.27,-Ro*0.14,Ro*0.09,0,Math.PI*2);ctx.fill();
-
-  // Eye shine
-  ctx.fillStyle='#fff';
-  ctx.beginPath();ctx.arc(-Ro*0.22,-Ro*0.19,Ro*0.04,0,Math.PI*2);ctx.fill();
-  ctx.beginPath();ctx.arc(Ro*0.32,-Ro*0.19,Ro*0.04,0,Math.PI*2);ctx.fill();
-
-  // Beak (triangle, clearly orange)
-  ctx.fillStyle='#e07810';
-  ctx.strokeStyle='#a05010';ctx.lineWidth=0.8;
-  ctx.beginPath();
-  ctx.moveTo(-Ro*0.14,Ro*0.1);
-  ctx.lineTo(0,Ro*0.32);
-  ctx.lineTo(Ro*0.14,Ro*0.1);
-  ctx.closePath();ctx.fill();ctx.stroke();
-
-  // Feet
-  ctx.strokeStyle='#a07030';ctx.lineWidth=1.2;
-  ctx.beginPath();ctx.moveTo(-Ro*0.28,Ro*0.85);ctx.lineTo(-Ro*0.48,Ro*1.1);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(-Ro*0.18,Ro*0.88);ctx.lineTo(-Ro*0.28,Ro*1.12);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(-Ro*0.08,Ro*0.9);ctx.lineTo(-Ro*0.05,Ro*1.14);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(Ro*0.28,Ro*0.85);ctx.lineTo(Ro*0.48,Ro*1.1);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(Ro*0.18,Ro*0.88);ctx.lineTo(Ro*0.28,Ro*1.12);ctx.stroke();
-  ctx.beginPath();ctx.moveTo(Ro*0.08,Ro*0.9);ctx.lineTo(Ro*0.05,Ro*1.14);ctx.stroke();
 
   ctx.restore();
 }
-
 function drawGhosts(){
   for(const g of ghosts){
     const cx=(g.c+0.5)*GTW,cy=(g.r+0.5)*GTH;
@@ -532,10 +473,10 @@ function drawGhosts(){
 }
 
 const FB={
-  negro:{ok:true,title:'¡Correcto!',msg:'El vaso de icopor con residuos de alimento va al contenedor <strong style="color:#a8e063">NEGRO</strong> (residuos no aprovechables). El icopor sucio no puede reciclarse.'},
+  negro:{ok:true,title:'Â¡Correcto!',msg:'El vaso de icopor con residuos de alimento va al contenedor <strong style="color:#a8e063">NEGRO</strong> (residuos no aprovechables). El icopor sucio no puede reciclarse.'},
   blanco:{ok:false,title:'Incorrecto',msg:'El contenedor <strong>BLANCO</strong> es para reciclables limpios y secos. El vaso con comida va al <strong style="color:#a8e063">NEGRO</strong>.'},
   rojo:{ok:false,title:'Incorrecto',msg:'El contenedor <strong>ROJO</strong> es para residuos peligrosos. El vaso con comida va al <strong style="color:#a8e063">NEGRO</strong>.'},
-  timeout:{ok:false,title:'Sin vidas',msg:'El búho fue atrapado. La respuesta correcta es el contenedor <strong style="color:#a8e063">NEGRO</strong>.'},
+  timeout:{ok:false,title:'Sin vidas',msg:'El bÃºho fue atrapado. La respuesta correcta es el contenedor <strong style="color:#a8e063">NEGRO</strong>.'},
 };
 
 function showResult(chosen){
@@ -549,15 +490,15 @@ function showResult(chosen){
   }
   document.getElementById('rtit').textContent=fb.title;
   document.getElementById('rmsg').innerHTML=fb.msg;
-  document.getElementById('rtime').textContent=fb.ok?'Puntos: '+score+' — Tiempo: '+elapsed+'s':'';
+  document.getElementById('rtime').textContent=fb.ok?'Puntos: '+score+' â€” Tiempo: '+elapsed+'s':'';
   const tbody=document.getElementById('rb');tbody.innerHTML='';
-  const medals=['🥇','🥈','🥉'];
-  if(!ranking.length){tbody.innerHTML='<tr><td colspan="4" style="color:#555;text-align:center">Sin registros aún</td></tr>';}
+  const medals=['ðŸ¥‡','ðŸ¥ˆ','ðŸ¥‰'];
+  if(!ranking.length){tbody.innerHTML='<tr><td colspan="4" style="color:#555;text-align:center">Sin registros aÃºn</td></tr>';}
   else ranking.forEach((e,i)=>{
     const tr=document.createElement('tr');
     const me=fb.ok&&e.name===pname&&e.score===score;
     if(me)tr.style.color='#a8e063';
-    tr.innerHTML=`<td>${medals[i]||i+1}</td><td>${e.name}${me?' ← tú':''}</td><td>${e.score}</td><td>${e.time}s</td>`;
+    tr.innerHTML=`<td>${medals[i]||i+1}</td><td>${e.name}${me?' â† tÃº':''}</td><td>${e.score}</td><td>${e.time}s</td>`;
     tbody.appendChild(tr);
   });
   show('sr');
